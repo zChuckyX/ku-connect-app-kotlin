@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "PROJECT_NAME",
+    "project_id": "ku-connect-app",
+    "storage_bucket": "ku-connect-app.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:PROJECT_NAME:android:PROJECT_ID",
+        "android_client_info": {
+          "package_name": "com.example.ku_connect"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "API_KEY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
