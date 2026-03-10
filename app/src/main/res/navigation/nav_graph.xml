@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/feedFragment">
+
+    <fragment
+            android:id="@+id/feedFragment"
+            android:name="com.example.ku_connect.ui.feed.FeedFragment"
+            android:label="ฟีด">
+        <action
+                android:id="@+id/action_feed_to_postDetail"
+                app:destination="@id/postDetailFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/postsFragment"
+            android:name="com.example.ku_connect.ui.feed.PostsFragment"
+            android:label="กระทู้">
+        <action
+                android:id="@+id/action_posts_to_postDetail"
+                app:destination="@id/postDetailFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/postDetailFragment"
+            android:name="com.example.ku_connect.ui.feed.PostDetailFragment"
+            android:label="กระทู้">
+        <argument android:name="postId"    app:argType="string" />
+        <argument android:name="postTitle" app:argType="string" android:defaultValue="" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/marketFragment"
+            android:name="com.example.ku_connect.ui.market.MarketFragment"
+            android:label="ตลาด" />
+
+    <fragment
+            android:id="@+id/profileFragment"
+            android:name="com.example.ku_connect.ui.profile.ProfileFragment"
+            android:label="โปรไฟล์">
+        <action
+                android:id="@+id/action_profile_to_postDetail"
+                app:destination="@id/postDetailFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+        <action
+                android:id="@+id/action_profile_to_myPosts"
+                app:destination="@id/myPostsFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+            android:id="@+id/myPostsFragment"
+            android:name="com.example.ku_connect.ui.profile.MyPostsFragment"
+            android:label="โพสต์ของฉัน">
+        <action
+                android:id="@+id/action_myPosts_to_postDetail"
+                app:destination="@id/postDetailFragment"
+                app:enterAnim="@anim/slide_in_right"
+                app:exitAnim="@anim/slide_out_left"
+                app:popEnterAnim="@anim/slide_in_left"
+                app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+</navigation>

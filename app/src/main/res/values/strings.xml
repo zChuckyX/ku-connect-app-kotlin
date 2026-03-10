@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">KU Connect</string>
+
+    <string name="login">เข้าสู่ระบบ</string>
+    <string name="register">สมัครสมาชิก</string>
+    <string name="email_hint">อีเมล @ku.th</string>
+    <string name="password_hint">รหัสผ่าน</string>
+    <string name="confirm_password_hint">ยืนยันรหัสผ่าน</string>
+    <string name="username_hint">ชื่อผู้ใช้</string>
+    <string name="no_account">ยังไม่มีบัญชี? สมัครสมาชิก</string>
+    <string name="have_account">มีบัญชีแล้ว? เข้าสู่ระบบ</string>
+
+    <string name="nav_feed">ฟีด</string>
+    <string name="nav_posts">กระทู้</string>
+    <string name="nav_market">ตลาด</string>
+    <string name="nav_profile">โปรไฟล์</string>
+
+    <string name="new_post">สร้างกระทู้</string>
+    <string name="post_title_hint">หัวข้อกระทู้</string>
+    <string name="post_content_hint">เนื้อหา...</string>
+    <string name="add_image">เพิ่มรูปภาพ</string>
+    <string name="publish">เผยแพร่</string>
+    <string name="popular">ยอดนิยม</string>
+    <string name="search_hint">ค้นหา...</string>
+
+    <string name="new_shop">เพิ่มร้านค้า</string>
+    <string name="shop_name_hint">ชื่อร้านค้า</string>
+    <string name="shop_description_hint">คำอธิบายร้านค้า</string>
+    <string name="line_openchat_hint">ลิงก์ Line OpenChat</string>
+    <string name="open_line">เปิด Line OpenChat</string>
+
+    <string name="my_posts">โพสต์ของฉัน</string>
+    <string name="my_items">ร้านค้าของฉัน</string>
+    <string name="post_count">โพสต์</string>
+    <string name="item_count">สินค้า</string>
+    <string name="edit_username">แก้ไขชื่อผู้ใช้</string>
+    <string name="logout">ออกจากระบบ</string>
+
+    <string name="comment_hint">เขียนคอมเมนต์...</string>
+    <string name="send">ส่ง</string>
+    <string name="attach_file">แนบไฟล์</string>
+</resources>

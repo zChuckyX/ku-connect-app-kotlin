@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="Theme.KUConnect" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/ku_green</item>
+        <item name="colorPrimaryVariant">@color/ku_green_light</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="colorSecondary">@color/ios_blue</item>
+        <item name="colorSurface">@color/ios_surface</item>
+        <item name="android:colorBackground">@color/ios_background</item>
+        <item name="android:windowBackground">@color/ios_background</item>
+        <item name="android:statusBarColor">@color/ku_green</item>
+        <item name="android:navigationBarColor">@color/ios_surface</item>
+        <item name="android:fontFamily">sans-serif</item>
+        <item name="materialAlertDialogTheme">@style/AlertDialogTheme</item>
+    </style>
+
+    <style name="Theme.KUConnect.Auth" parent="Theme.KUConnect">
+        <item name="android:statusBarColor">@color/ku_green</item>
+        <item name="android:windowLightStatusBar">false</item>
+    </style>
+
+    <style name="CardStyle" parent="Widget.MaterialComponents.CardView">
+        <item name="cardCornerRadius">12dp</item>
+        <item name="cardElevation">0dp</item>
+        <item name="strokeColor">@color/ios_separator</item>
+        <item name="strokeWidth">0.5dp</item>
+        <item name="cardBackgroundColor">@color/ios_surface</item>
+    </style>
+
+    <style name="ButtonPrimary" parent="Widget.MaterialComponents.Button">
+        <item name="android:background">@drawable/bg_button_primary</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:fontFamily">sans-serif-medium</item>
+        <item name="android:paddingTop">14dp</item>
+        <item name="android:paddingBottom">14dp</item>
+        <item name="cornerRadius">12dp</item>
+        <item name="backgroundTint">@null</item>
+    </style>
+
+    <style name="TextFieldStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">10dp</item>
+        <item name="boxCornerRadiusTopEnd">10dp</item>
+        <item name="boxCornerRadiusBottomStart">10dp</item>
+        <item name="boxCornerRadiusBottomEnd">10dp</item>
+        <item name="boxStrokeColor">@color/ios_separator</item>
+        <item name="boxBackgroundColor">@color/white</item>
+        <item name="hintTextColor">@color/ios_tertiary_label</item>
+    </style>
+
+    <style name="AlertDialogTheme" parent="ThemeOverlay.MaterialComponents.Dialog.Alert">
+        <item name="colorPrimary">@color/ku_green</item>
+    </style>
+
+    <style name="BottomNavStyle" parent="Widget.MaterialComponents.BottomNavigationView">
+        <item name="itemIconTint">@drawable/bottom_nav_selector</item>
+        <item name="itemTextColor">@drawable/bottom_nav_selector</item>
+        <item name="elevation">8dp</item>
+    </style>
+</resources>

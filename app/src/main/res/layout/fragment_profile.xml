@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/ios_background">
+
+    <androidx.core.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:overScrollMode="never">
+
+        <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:paddingBottom="24dp">
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:background="@drawable/bg_feed_header"
+                    android:gravity="center"
+                    android:paddingTop="72dp"
+                    android:paddingBottom="28dp"
+                    android:paddingStart="@dimen/spacing_lg"
+                    android:paddingEnd="@dimen/spacing_lg"
+                    android:elevation="4dp">
+
+                <FrameLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content">
+
+                    <TextView
+                            android:id="@+id/tvAvatarLarge"
+                            android:layout_width="84dp"
+                            android:layout_height="84dp"
+                            android:gravity="center"
+                            android:textSize="34sp"
+                            android:textStyle="bold"
+                            android:background="@drawable/bg_avatar_placeholder" />
+                </FrameLayout>
+
+                <TextView
+                        android:id="@+id/tvUsername"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="20sp"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium"
+                        android:layout_marginTop="12dp" />
+
+                <TextView
+                        android:id="@+id/tvEmail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="13sp"
+                        android:textColor="#B2DFDB"
+                        android:layout_marginTop="3dp" />
+
+                <View
+                        android:layout_width="match_parent"
+                        android:layout_height="0.5dp"
+                        android:background="#33FFFFFF"
+                        android:layout_marginTop="18dp"
+                        android:layout_marginBottom="18dp" />
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                    <LinearLayout
+                            android:id="@+id/lvPostCount"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                        <TextView
+                                android:id="@+id/tvPostCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="26sp"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:fontFamily="sans-serif-medium" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="โพสต์"
+                                android:textSize="12sp"
+                                android:textColor="#B2DFDB"
+                                android:layout_marginTop="2dp" />
+                    </LinearLayout>
+
+                    <View
+                            android:layout_width="0.5dp"
+                            android:layout_height="40dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="#33FFFFFF" />
+
+                    <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical"
+                            android:gravity="center">
+
+                        <TextView
+                                android:id="@+id/tvItemCount"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="0"
+                                android:textSize="26sp"
+                                android:textColor="#FFFFFF"
+                                android:textStyle="bold"
+                                android:fontFamily="sans-serif-medium" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="ร้านค้า"
+                                android:textSize="12sp"
+                                android:textColor="#B2DFDB"
+                                android:layout_marginTop="2dp" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+            <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="12dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/ios_separator"
+                    app:strokeWidth="0.5dp"
+                    app:cardBackgroundColor="@color/ios_surface"
+                    android:layout_marginStart="@dimen/spacing_md"
+                    android:layout_marginEnd="@dimen/spacing_md"
+                    android:layout_marginTop="@dimen/spacing_md">
+
+                <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="@dimen/spacing_md">
+
+                    <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:gravity="center_vertical"
+                            android:layout_marginBottom="4dp">
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="✏️"
+                                android:textSize="14sp"
+                                android:layout_marginEnd="6dp" />
+
+                        <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="แก้ไขโปรไฟล์"
+                                android:textSize="15sp"
+                                android:textColor="@color/ios_label"
+                                android:textStyle="bold" />
+                    </LinearLayout>
+
+                    <com.google.android.material.textfield.TextInputLayout
+                            android:id="@+id/tilUsername"
+                            style="@style/TextFieldStyle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="ชื่อผู้ใช้"
+                            android:layout_marginTop="@dimen/spacing_sm">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                                android:id="@+id/etUsername"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:imeOptions="actionDone" />
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <Button
+                            android:id="@+id/btnUpdateUsername"
+                            style="@style/ButtonPrimary"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="บันทึก"
+                            android:layout_marginTop="@dimen/spacing_sm"
+                            android:background="@drawable/bg_button_primary"
+                            android:textColor="@drawable/button_text_selector" />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical"
+                    android:paddingStart="@dimen/spacing_md"
+                    android:paddingEnd="@dimen/spacing_md"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="8dp">
+
+                <View
+                        android:layout_width="3dp"
+                        android:layout_height="18dp"
+                        android:background="@drawable/bg_section_accent"
+                        android:layout_marginEnd="8dp" />
+
+                <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="โพสต์ของฉัน"
+                        android:textSize="17sp"
+                        android:textColor="@color/ios_label"
+                        android:textStyle="bold"
+                        android:fontFamily="sans-serif-medium" />
+
+                <ProgressBar
+                        android:id="@+id/progressPosts"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:visibility="gone"
+                        android:indeterminateTint="@color/ku_green"
+                        android:layout_marginEnd="8dp" />
+
+                <TextView
+                        android:id="@+id/btnSeeAllPosts"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="ดูทั้งหมด ›"
+                        android:textSize="14sp"
+                        android:textColor="@color/ios_blue"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:padding="4dp" />
+            </LinearLayout>
+
+            <TextView
+                    android:id="@+id/tvEmptyPosts"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="ยังไม่มีโพสต์\nกดปุ่ม + ในหน้ากระทู้เพื่อเริ่มต้น"
+                    android:textSize="14sp"
+                    android:textColor="@color/ios_tertiary_label"
+                    android:gravity="center"
+                    android:lineSpacingExtra="4dp"
+                    android:visibility="gone"
+                    android:paddingTop="24dp"
+                    android:paddingBottom="24dp"
+                    android:paddingStart="@dimen/spacing_md"
+                    android:paddingEnd="@dimen/spacing_md" />
+
+            <com.google.android.material.card.MaterialCardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/spacing_md"
+                    android:layout_marginTop="8dp"
+                    app:cardCornerRadius="14dp"
+                    app:cardElevation="0dp"
+                    app:strokeColor="@color/ios_separator"
+                    app:strokeWidth="0.5dp"
+                    app:cardBackgroundColor="@color/ios_surface">
+
+                <TextView
+                        android:id="@+id/btnLogout"
+                        android:layout_width="match_parent"
+                        android:layout_height="48dp"
+                        android:gravity="center"
+                        android:text="@string/logout"
+                        android:textSize="16sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/ios_red"
+                        android:background="?attr/selectableItemBackground" />
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

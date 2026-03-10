@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:orientation="vertical">
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/spacing_md">
+
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/shop_name_hint">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etShopName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:imeOptions="actionNext" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/shop_description_hint"
+                android:layout_marginTop="@dimen/spacing_sm">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDescription"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:minLines="3"
+                    android:gravity="top|start"
+                    android:inputType="textMultiLine" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+                style="@style/TextFieldStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/line_openchat_hint"
+                android:layout_marginTop="@dimen/spacing_sm">
+
+            <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etLineUrl"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textUri"
+                    android:imeOptions="actionDone" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cardImagePreview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/spacing_sm"
+                android:visibility="gone"
+                app:cardCornerRadius="10dp"
+                app:cardElevation="0dp"
+                app:strokeColor="@color/ios_separator"
+                app:strokeWidth="0.5dp">
+
+            <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                <ImageView
+                        android:id="@+id/ivPreview"
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:scaleType="centerCrop"
+                        android:background="@color/ios_fill" />
+
+                <ImageButton
+                        android:id="@+id/btnRemoveImage"
+                        android:layout_width="28dp"
+                        android:layout_height="28dp"
+                        android:layout_gravity="top|end"
+                        android:layout_margin="8dp"
+                        android:background="@drawable/bg_remove_badge"
+                        android:src="@drawable/ic_close"
+                        android:contentDescription="ลบรูป"
+                        android:padding="4dp"
+                        android:elevation="4dp" />
+
+                <TextView
+                        android:id="@+id/tvImageName"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="#99000000"
+                        android:textColor="#FFFFFF"
+                        android:textSize="11sp"
+                        android:paddingStart="8dp"
+                        android:paddingEnd="8dp"
+                        android:paddingTop="4dp"
+                        android:paddingBottom="4dp"
+                        android:maxLines="1"
+                        android:ellipsize="middle" />
+            </FrameLayout>
+        </androidx.cardview.widget.CardView>
+
+        <Button
+                android:id="@+id/btnPickImage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="เพิ่มรูปร้านค้า (ไม่บังคับ)"
+                android:textColor="@color/ios_blue"
+                android:backgroundTint="@color/ios_fill"
+                android:layout_marginTop="@dimen/spacing_sm"
+                app:cornerRadius="10dp" />
+
+    </LinearLayout>
+</LinearLayout>
